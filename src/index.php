@@ -25,13 +25,16 @@ class CompteBancaire {
     }
 }
 
-// Exemple d'utilisation :
-$compte1 = new CompteBancaire("John Doe", 1000);
-$compte1->affiche();  // Affiche "Compte de John Doe: Solde = 1000"
-$compte1->depot(500);
-$compte1->affiche();  // Affiche "Compte de John Doe: Solde = 1500"
+//* Compte 1
+$compte1 = new CompteBancaire("Duchmol", 800);
+$compte1->affiche();  
+$compte1->depot(350);  
 $compte1->retrait(200);
-$compte1->affiche();  // Affiche "Compte de John Doe: Solde = 1300"
-$compte1->retrait(2000);  // Affiche "Solde insuffisant."
+$compte1->affiche();  
+
+//* Compte 2
+$compte2 = new CompteBancaire();
+$compte2->depot(25);
+$compte2->affiche(); 
 
 ?>
