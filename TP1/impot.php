@@ -13,8 +13,11 @@
         public function calculerImpot() {
             if ($this->revenus <= 15000) {
                 return $this->revenus * pauvre;
-            } else {
-                return $this->revenus * riche;
+            }  else {
+                $impot = 15000 * pauvre;
+                $revenusRestants = $this->revenus - 15000; 
+                $impot += $revenusRestants * riche;
+              return $impot;
             }
         }
         public function afficherImpot() {
